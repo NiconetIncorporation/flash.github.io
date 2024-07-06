@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niconet Flash</title>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript">
+    </script>
+    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript">
+    swfobject.embedSWF("papasbakeria.swf", "myContent", "300", "120", "9.0.0");
+    </script>
+</head>
+<body>
+    <h1>Niconet Flash</h1>
+    <a href="index.html">Volver a la página principal</a>
+        <ruffle-embed src="papasbakeria.swf" style="width:100%; height:100%;"></ruffle-embed>
+        <script type="text/javascript">
+            function resizeGame() {
+                var game = document.getElementById('myContent');
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+                game.style.width = width + 'px';
+                game.style.height = height + 'px';
+            }
+            window.onresize = resizeGame;
+            window.onload = resizeGame;
+        </script>
+    <div id="myContent">
+        <p>Contenido alternativo</p>
+    </div>
+</body>
+</html>
